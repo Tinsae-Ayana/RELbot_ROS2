@@ -18,7 +18,7 @@ private:
   rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher;
 
   // function that is called everytime cam2image node publish image
-  void timer_callback(const sensor_msgs::msg::Image &cam_frame) {
+  void callback(const sensor_msgs::msg::Image &cam_frame) {
     cv_bridge::CvImagePtr cv_image =
         cv_bridge::toCvCopy(cam_frame, sensor_msgs::image_encodings::BGR8);
     cv::Mat frame = cv_image->image;
@@ -43,7 +43,7 @@ public:
     this->declare_parameter(parameter_name, 100);
     publisher = this->create_publisher<std_msgs::msg::String>("brightness", 10);
     subscriber = this->create_subscription<sensor_msgs::msg::Image>(
-        "image", 10, std::bind(&BrightnessNode::timer_callback, this, _1));
+        "image", 10, std::bind(&BrightnessNode::callback, this, _1));
   }
 };
 
