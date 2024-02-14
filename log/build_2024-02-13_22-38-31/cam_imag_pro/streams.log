@@ -1,0 +1,33 @@
+[0.067s] Invoking command in '/home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro -- -j16 -l16
+[0.104s] [35m[1mConsolidate compiler generated dependencies of target light_pos_indicator_node[0m
+[0.115s] [ 50%] Built target brightness_node
+[0.121s] [ 75%] [32mBuilding CXX object CMakeFiles/light_pos_indicator_node.dir/src/light_pos_indicator_node.cpp.o[0m
+[2.001s] [01m[K/home/tinsae/ASDFR/assignment1_ws/src/cam_imag_pro/src/light_pos_indicator_node.cpp:[m[K In member function ‘[01m[Kvoid LightPoseNode::callback(const Image&)[m[K’:
+[2.001s] [01m[K/home/tinsae/ASDFR/assignment1_ws/src/cam_imag_pro/src/light_pos_indicator_node.cpp:37:16:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kcenter[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[2.001s]    37 |     cv::Scalar [01;35m[Kcenter[m[K = cv::mean(white_pixels_indices);
+[2.001s]       |                [01;35m[K^~~~~~[m[K
+[6.412s] [100%] [32m[1mLinking CXX executable light_pos_indicator_node[0m
+[6.913s] [100%] Built target light_pos_indicator_node
+[6.923s] Invoked command in '/home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro -- -j16 -l16
+[6.961s] Invoking command in '/home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro
+[6.973s] -- Install configuration: ""
+[6.973s] -- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/lib/cam_imag_pro/brightness_node
+[6.979s] -- Set runtime path of "/home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/lib/cam_imag_pro/brightness_node" to ""
+[6.979s] -- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/lib/cam_imag_pro/light_pos_indicator_node
+[6.982s] -- Set runtime path of "/home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/lib/cam_imag_pro/light_pos_indicator_node" to ""
+[6.983s] -- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/ament_index/resource_index/package_run_dependencies/cam_imag_pro
+[6.983s] -- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/ament_index/resource_index/parent_prefix_path/cam_imag_pro
+[6.983s] -- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/environment/ament_prefix_path.sh
+[6.983s] -- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/environment/ament_prefix_path.dsv
+[6.983s] -- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/environment/path.sh
+[6.983s] -- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/environment/path.dsv
+[6.983s] -- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/local_setup.bash
+[6.983s] -- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/local_setup.sh
+[6.983s] -- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/local_setup.zsh
+[6.984s] -- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/local_setup.dsv
+[6.984s] -- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/package.dsv
+[6.984s] -- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/ament_index/resource_index/packages/cam_imag_pro
+[6.984s] -- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/cmake/cam_imag_proConfig.cmake
+[6.984s] -- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/cmake/cam_imag_proConfig-version.cmake
+[6.984s] -- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/package.xml
+[6.987s] Invoked command in '/home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro

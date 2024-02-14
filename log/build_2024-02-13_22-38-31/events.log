@@ -1,0 +1,111 @@
+[0.000000] (-) TimerEvent: {}
+[0.000151] (cam_imag_pro) JobQueued: {'identifier': 'cam_imag_pro', 'dependencies': OrderedDict()}
+[0.000173] (cam_imag_pro) JobStarted: {'identifier': 'cam_imag_pro'}
+[0.064244] (cam_imag_pro) JobProgress: {'identifier': 'cam_imag_pro', 'progress': 'cmake'}
+[0.064989] (cam_imag_pro) JobProgress: {'identifier': 'cam_imag_pro', 'progress': 'build'}
+[0.065285] (cam_imag_pro) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro', '--', '-j16', '-l16'], 'cwd': '/home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'tinsae'), ('LC_TIME', 'nl_NL.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/tinsae'), ('OLDPWD', '/home/tinsae'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'nl_NL.UTF-8'), ('MANAGERPID', '1424'), ('SYSTEMD_EXEC_PID', '2402'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '15215'), ('COLCON_PREFIX_PATH', '/home/tinsae/ASDFR/assignment1_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'tinsae'), ('JOURNAL_STREAM', '8:37143'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'tinsae'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/tinsae/.local/bin'), ('SESSION_MANAGER', 'local/tinsae-ThinkPad-P15v-Gen-2i:@/tmp/.ICE-unix/2036,unix/tinsae-ThinkPad-P15v-Gen-2i:/tmp/.ICE-unix/2036'), ('INVOCATION_ID', 'a8be49c301434ee384a342a11370e9ae'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'nl_NL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'nl_NL.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nl_NL.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:cff59ada-0261-42ae-ac20-60c8cf5267c6'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nl_NL.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'nl_NL.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nl_NL.UTF-8'), ('LC_PAPER', 'nl_NL.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099566] (-) TimerEvent: {}
+[0.104077] (cam_imag_pro) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target light_pos_indicator_node\x1b[0m\n'}
+[0.115396] (cam_imag_pro) StdoutLine: {'line': b'[ 50%] Built target brightness_node\n'}
+[0.120773] (cam_imag_pro) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/light_pos_indicator_node.dir/src/light_pos_indicator_node.cpp.o\x1b[0m\n'}
+[0.199795] (-) TimerEvent: {}
+[0.300332] (-) TimerEvent: {}
+[0.400841] (-) TimerEvent: {}
+[0.501237] (-) TimerEvent: {}
+[0.601647] (-) TimerEvent: {}
+[0.702118] (-) TimerEvent: {}
+[0.802415] (-) TimerEvent: {}
+[0.902854] (-) TimerEvent: {}
+[1.003442] (-) TimerEvent: {}
+[1.103989] (-) TimerEvent: {}
+[1.204524] (-) TimerEvent: {}
+[1.305066] (-) TimerEvent: {}
+[1.405587] (-) TimerEvent: {}
+[1.506122] (-) TimerEvent: {}
+[1.606630] (-) TimerEvent: {}
+[1.707167] (-) TimerEvent: {}
+[1.807691] (-) TimerEvent: {}
+[1.908145] (-) TimerEvent: {}
+[2.000870] (cam_imag_pro) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tinsae/ASDFR/assignment1_ws/src/cam_imag_pro/src/light_pos_indicator_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid LightPoseNode::callback(const Image&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.001079] (cam_imag_pro) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tinsae/ASDFR/assignment1_ws/src/cam_imag_pro/src/light_pos_indicator_node.cpp:37:16:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Kcenter\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable\x07-Wunused-but-set-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.001140] (cam_imag_pro) StderrLine: {'line': b'   37 |     cv::Scalar \x1b[01;35m\x1b[Kcenter\x1b[m\x1b[K = cv::mean(white_pixels_indices);\n'}
+[2.001190] (cam_imag_pro) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.008251] (-) TimerEvent: {}
+[2.108619] (-) TimerEvent: {}
+[2.209157] (-) TimerEvent: {}
+[2.309698] (-) TimerEvent: {}
+[2.410231] (-) TimerEvent: {}
+[2.510745] (-) TimerEvent: {}
+[2.611307] (-) TimerEvent: {}
+[2.711824] (-) TimerEvent: {}
+[2.812365] (-) TimerEvent: {}
+[2.912810] (-) TimerEvent: {}
+[3.013213] (-) TimerEvent: {}
+[3.113736] (-) TimerEvent: {}
+[3.214229] (-) TimerEvent: {}
+[3.314743] (-) TimerEvent: {}
+[3.415258] (-) TimerEvent: {}
+[3.515801] (-) TimerEvent: {}
+[3.616287] (-) TimerEvent: {}
+[3.716721] (-) TimerEvent: {}
+[3.817105] (-) TimerEvent: {}
+[3.917631] (-) TimerEvent: {}
+[4.018176] (-) TimerEvent: {}
+[4.118670] (-) TimerEvent: {}
+[4.219174] (-) TimerEvent: {}
+[4.319600] (-) TimerEvent: {}
+[4.420106] (-) TimerEvent: {}
+[4.520536] (-) TimerEvent: {}
+[4.620983] (-) TimerEvent: {}
+[4.721516] (-) TimerEvent: {}
+[4.822064] (-) TimerEvent: {}
+[4.922487] (-) TimerEvent: {}
+[5.022936] (-) TimerEvent: {}
+[5.123354] (-) TimerEvent: {}
+[5.223853] (-) TimerEvent: {}
+[5.324181] (-) TimerEvent: {}
+[5.424540] (-) TimerEvent: {}
+[5.525099] (-) TimerEvent: {}
+[5.625601] (-) TimerEvent: {}
+[5.726115] (-) TimerEvent: {}
+[5.826612] (-) TimerEvent: {}
+[5.927114] (-) TimerEvent: {}
+[6.027618] (-) TimerEvent: {}
+[6.128036] (-) TimerEvent: {}
+[6.228422] (-) TimerEvent: {}
+[6.328771] (-) TimerEvent: {}
+[6.412189] (cam_imag_pro) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable light_pos_indicator_node\x1b[0m\n'}
+[6.428875] (-) TimerEvent: {}
+[6.529122] (-) TimerEvent: {}
+[6.629540] (-) TimerEvent: {}
+[6.730001] (-) TimerEvent: {}
+[6.830429] (-) TimerEvent: {}
+[6.913493] (cam_imag_pro) StdoutLine: {'line': b'[100%] Built target light_pos_indicator_node\n'}
+[6.922087] (cam_imag_pro) CommandEnded: {'returncode': 0}
+[6.930520] (-) TimerEvent: {}
+[6.947503] (cam_imag_pro) JobProgress: {'identifier': 'cam_imag_pro', 'progress': 'install'}
+[6.960710] (cam_imag_pro) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro'], 'cwd': '/home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'tinsae'), ('LC_TIME', 'nl_NL.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/tinsae'), ('OLDPWD', '/home/tinsae'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'nl_NL.UTF-8'), ('MANAGERPID', '1424'), ('SYSTEMD_EXEC_PID', '2402'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '15215'), ('COLCON_PREFIX_PATH', '/home/tinsae/ASDFR/assignment1_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'tinsae'), ('JOURNAL_STREAM', '8:37143'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'tinsae'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/tinsae/.local/bin'), ('SESSION_MANAGER', 'local/tinsae-ThinkPad-P15v-Gen-2i:@/tmp/.ICE-unix/2036,unix/tinsae-ThinkPad-P15v-Gen-2i:/tmp/.ICE-unix/2036'), ('INVOCATION_ID', 'a8be49c301434ee384a342a11370e9ae'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'nl_NL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'nl_NL.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nl_NL.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:cff59ada-0261-42ae-ac20-60c8cf5267c6'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nl_NL.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'nl_NL.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nl_NL.UTF-8'), ('LC_PAPER', 'nl_NL.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[6.972643] (cam_imag_pro) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.973095] (cam_imag_pro) StdoutLine: {'line': b'-- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/lib/cam_imag_pro/brightness_node\n'}
+[6.979052] (cam_imag_pro) StdoutLine: {'line': b'-- Set runtime path of "/home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/lib/cam_imag_pro/brightness_node" to ""\n'}
+[6.979224] (cam_imag_pro) StdoutLine: {'line': b'-- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/lib/cam_imag_pro/light_pos_indicator_node\n'}
+[6.982296] (cam_imag_pro) StdoutLine: {'line': b'-- Set runtime path of "/home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/lib/cam_imag_pro/light_pos_indicator_node" to ""\n'}
+[6.982704] (cam_imag_pro) StdoutLine: {'line': b'-- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/ament_index/resource_index/package_run_dependencies/cam_imag_pro\n'}
+[6.982915] (cam_imag_pro) StdoutLine: {'line': b'-- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/ament_index/resource_index/parent_prefix_path/cam_imag_pro\n'}
+[6.982994] (cam_imag_pro) StdoutLine: {'line': b'-- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/environment/ament_prefix_path.sh\n'}
+[6.983070] (cam_imag_pro) StdoutLine: {'line': b'-- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/environment/ament_prefix_path.dsv\n'}
+[6.983135] (cam_imag_pro) StdoutLine: {'line': b'-- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/environment/path.sh\n'}
+[6.983206] (cam_imag_pro) StdoutLine: {'line': b'-- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/environment/path.dsv\n'}
+[6.983278] (cam_imag_pro) StdoutLine: {'line': b'-- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/local_setup.bash\n'}
+[6.983432] (cam_imag_pro) StdoutLine: {'line': b'-- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/local_setup.sh\n'}
+[6.983555] (cam_imag_pro) StdoutLine: {'line': b'-- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/local_setup.zsh\n'}
+[6.983649] (cam_imag_pro) StdoutLine: {'line': b'-- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/local_setup.dsv\n'}
+[6.983748] (cam_imag_pro) StdoutLine: {'line': b'-- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/package.dsv\n'}
+[6.984204] (cam_imag_pro) StdoutLine: {'line': b'-- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/ament_index/resource_index/packages/cam_imag_pro\n'}
+[6.984283] (cam_imag_pro) StdoutLine: {'line': b'-- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/cmake/cam_imag_proConfig.cmake\n'}
+[6.984378] (cam_imag_pro) StdoutLine: {'line': b'-- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/cmake/cam_imag_proConfig-version.cmake\n'}
+[6.984474] (cam_imag_pro) StdoutLine: {'line': b'-- Installing: /home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro/share/cam_imag_pro/package.xml\n'}
+[6.986667] (cam_imag_pro) CommandEnded: {'returncode': 0}
+[7.030666] (-) TimerEvent: {}
+[7.116691] (cam_imag_pro) JobEnded: {'identifier': 'cam_imag_pro', 'rc': 0}
+[7.117239] (-) EventReactorShutdown: {}

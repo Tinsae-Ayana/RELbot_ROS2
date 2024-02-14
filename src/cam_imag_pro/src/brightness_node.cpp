@@ -37,7 +37,7 @@ private:
   }
 
 public:
-  const std::string parameter_name = "brightness";
+  const std::string parameter_name = "brightness_param";
   // constructor
   BrightnessNode() : Node("brightness_node") {
     this->declare_parameter(parameter_name, 100);

@@ -15,7 +15,7 @@ find_package(OpenCV REQUIRED)
 add_executable(brightness_node src/brightness_node.cpp)
 ament_target_dependencies(brightness_node rclcpp std_msgs sensor_msgs cv_bridge OpenCV)
 
-add_executable(light_pos_indicator_node.cpp src/light_pos_indicator_node.cpp)
+add_executable(light_pos_indicator_node src/light_pos_indicator_node.cpp)
 ament_target_dependencies(light_pos_indicator_node rclcpp std_msgs sensor_msgs cv_bridge OpenCV)
 
 install(TARGETS 
