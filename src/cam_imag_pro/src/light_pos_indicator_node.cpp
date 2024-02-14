@@ -55,7 +55,7 @@ private:
       auto cvImage = std::make_shared<cv_bridge::CvImage>();
       cvImage->encoding = "mono8";
       cvImage->header.frame_id = cam_frame.header.frame_id;
-      cvImage->image = grayScale;
+      cvImage->image = frame;
       auto im = cvImage->toImageMsg();
 
       // publish the coordinate and the image with rectangle
