@@ -1,4 +1,0 @@
-Invoking command in '/home/tinsae/ASDFR/assignment1_ws/build/RELbot_simulator': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/tinsae/ASDFR/assignment1_ws/build/RELbot_simulator -- -j16 -l16
-Invoked command in '/home/tinsae/ASDFR/assignment1_ws/build/RELbot_simulator' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/tinsae/ASDFR/assignment1_ws/build/RELbot_simulator -- -j16 -l16
-Invoking command in '/home/tinsae/ASDFR/assignment1_ws/build/RELbot_simulator': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/tinsae/ASDFR/assignment1_ws/build/RELbot_simulator
-Invoked command in '/home/tinsae/ASDFR/assignment1_ws/build/RELbot_simulator' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/tinsae/ASDFR/assignment1_ws/build/RELbot_simulator

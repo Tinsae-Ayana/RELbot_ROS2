@@ -1,4 +1,0 @@
-Invoking command in '/home/tinsae/ASDFR/assignment1_ws/build/setpoints_publisher': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/tinsae/ASDFR/assignment1_ws/build/setpoints_publisher -- -j16 -l16
-Invoked command in '/home/tinsae/ASDFR/assignment1_ws/build/setpoints_publisher' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/tinsae/ASDFR/assignment1_ws/build/setpoints_publisher -- -j16 -l16
-Invoking command in '/home/tinsae/ASDFR/assignment1_ws/build/setpoints_publisher': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/tinsae/ASDFR/assignment1_ws/build/setpoints_publisher
-Invoked command in '/home/tinsae/ASDFR/assignment1_ws/build/setpoints_publisher' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/tinsae/ASDFR/assignment1_ws/build/setpoints_publisher
