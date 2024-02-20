@@ -1,0 +1,6 @@
+Invoking command in '/home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/tinsae/ASDFR/assignment1_ws/src/cam_imag_pro -DCMAKE_INSTALL_PREFIX=/home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro
+Invoked command in '/home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/tinsae/ASDFR/assignment1_ws/src/cam_imag_pro -DCMAKE_INSTALL_PREFIX=/home/tinsae/ASDFR/assignment1_ws/install/cam_imag_pro
+Invoking command in '/home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro -- -j16 -l16
+Invoked command in '/home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro -- -j16 -l16
+Invoking command in '/home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro
+Invoked command in '/home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/tinsae/ASDFR/assignment1_ws/build/cam_imag_pro
