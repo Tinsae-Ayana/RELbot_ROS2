@@ -18,6 +18,10 @@ def  generate_launch_description() :
             ), 
             Node(
                 executable = "rqt_graph"
+            ), 
+            Node(
+                package = "cam_imag_pro",
+                executable= "light_pos_indicator_node"
             )
         ]
     )
