@@ -5,21 +5,25 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-# find dependencies
+
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
-
+find_package(geometry_msgs REQUIRED)
 add_executable(setpoints_publisher src/setpoints_publisher.cpp)
-target_include_directories(setpoints_publisher PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>)
+
 target_compile_features(setpoints_publisher PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
 ament_target_dependencies(
   setpoints_publisher
   "rclcpp"
   "std_msgs"
+  "geometry_msgs"
 )
+
+target_include_directories(setpoints_publisher  PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/setpoints_publisher>)
+
+
 
 # Install launch files.
 install(DIRECTORY
@@ -38,3 +42,4 @@ if(BUILD_TESTING)
 endif()
 
 ament_package()
+

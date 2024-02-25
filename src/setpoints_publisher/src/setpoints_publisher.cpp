@@ -2,50 +2,50 @@
 
 SetpointsPublisher::SetpointsPublisher() : Node("setpoints_publisher") {
 
-  // random number generator
-  std::random_device seed;
-  generator = std::mt19937(seed());
-  dist = std::uniform_real_distribution<>(-0.2, 0.2);
-
-  // create publishers
+  // create motor velocity publishers
   left_motor_vel_pub =
       this->create_publisher<std_msgs::msg::Float64>(LEFT_MOTOR_TOPIC, 10);
   right_motor_vel_pub =
       this->create_publisher<std_msgs::msg::Float64>(RIGHT_MOTOR_TOPIC, 10);
-  light_pose = this->create_subscription<std_msgs::msg::Int32MultiArray>(
-      "light_pose", 10, std::bind(&SetpointsPublisher::call_back, this, _1));
+  light_pose_topic =
+      this->create_subscription<geometry_msgs::msg::PointStamped>(
+          "light_pose", 10,
+          std::bind(&SetpointsPublisher::light_pose_callback, this, _1));
 
-  // create timer
-  timer = this->create_wall_timer(
-      100ms, std::bind(&SetpointsPublisher::timer_callback, this));
+  // create current camera position reciever
+  curr_pose_receiver =
+      this->create_subscription<geometry_msgs::msg::PointStamped>(
+          "output/camera_position", 1,
+          std::bind(&SetpointsPublisher::curr_pose_callback, this, _1));
 }
 
-void SetpointsPublisher::call_back(
-    const std_msgs::msg::Int32MultiArray &center_of_gravity) {
-  // TODO: instead of genrating random vel valus to motors we subscribe to
-  // light_pose_node and calculate the pose value from that and publish to
-  // motor nodes
-  RCLCPP_INFO(this->get_logger(), "this is being sent by light pose %d",
-              center_of_gravity.data[0]);
+void SetpointsPublisher::light_pose_callback(
+    const geometry_msgs::msg::PointStamped &center_of_gravity) {
+  this->light_pose.point = center_of_gravity.point;
 }
 
-void SetpointsPublisher::timer_callback() {
+void SetpointsPublisher::curr_pose_callback(
+    const geometry_msgs::msg::PointStamped &current_camera_pose) {
 
-  // TODO: to be removed once the call_back function is completely implemented
+  // get the difference betweeen current position the camera and light position
+  double x_difference =
+      (double)(current_camera_pose.point.x - this->light_pose.point.x);
 
-  // generate random values
-  float left_motor_vel = dist(generator);
-  float right_motor_vel = dist(generator);
+  // double y_difference =
+  //     (double)(this->light_pose.point.y -
+  //              current_camera_pose.point
+  //                  .y); // it does not have any effect since we can't move
+  //                  the
+  //                       // robot in z axis of the world (y axis of the image)
 
-  // create std_msgs types to be published
-  auto left_msg = std_msgs::msg::Float64();
-  left_msg.data = left_motor_vel;
-  auto right_msg = std_msgs::msg::Float64();
-  right_msg.data = right_motor_vel;
+  auto left_motor_vel = std_msgs::msg::Float64();
+  left_motor_vel.data = -0.01 * x_difference;
+  auto right_motor_vel = std_msgs::msg::Float64();
+  right_motor_vel.data = 0.01 * x_difference;
 
   // publish the data
-  left_motor_vel_pub->publish(left_msg);
-  right_motor_vel_pub->publish(right_msg);
+  left_motor_vel_pub->publish(left_motor_vel);
+  right_motor_vel_pub->publish(right_motor_vel);
 }
 
 int main(int argc, char **argv) {

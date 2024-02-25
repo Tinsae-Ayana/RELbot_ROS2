@@ -1,7 +1,7 @@
 #include "brightness_node.hpp"
 
 BrightnessNode::BrightnessNode() : Node("brightness_node") {
-  this->declare_parameter(parameter_name, 100);
+  this->declare_parameter(PARAMETER_NAME, 100);
   publisher = this->create_publisher<std_msgs::msg::String>("brightness", 10);
   subscriber = this->create_subscription<sensor_msgs::msg::Image>(
       "image", 10, std::bind(&BrightnessNode::callback, this, _1));
@@ -16,7 +16,7 @@ void BrightnessNode::callback(const sensor_msgs::msg::Image &cam_frame) {
   cv::Scalar meanValue = cv::mean(grayScale);
   double avg_brightness = meanValue[0];
   auto msg = std_msgs::msg::String();
-  if (avg_brightness > this->get_parameter(parameter_name).as_int()) {
+  if (avg_brightness > this->get_parameter(PARAMETER_NAME).as_int()) {
     msg.data = "It is light";
     publisher->publish(msg);
   } else {

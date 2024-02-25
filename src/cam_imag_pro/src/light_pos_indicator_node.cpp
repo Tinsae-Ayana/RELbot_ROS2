@@ -1,8 +1,8 @@
 #include "light_pos_indicator_node.hpp"
 
 LightPoseNode::LightPoseNode() : Node("light_pose_indicator_node") {
-  publisher =
-      this->create_publisher<std_msgs::msg::Int32MultiArray>("light_pose", 10);
+  publisher = this->create_publisher<geometry_msgs::msg::PointStamped>(
+      "light_pose", 10);
   publish_with_mark =
       this->create_publisher<sensor_msgs::msg::Image>("image_with_marker", 10);
   subscription = this->create_subscription<sensor_msgs::msg::Image>(
@@ -11,24 +11,31 @@ LightPoseNode::LightPoseNode() : Node("light_pose_indicator_node") {
 }
 
 void LightPoseNode::callback(const sensor_msgs::msg::Image &cam_frame) {
+  // convert it to grayimage
   cv_bridge::CvImagePtr cv_image =
       cv_bridge::toCvCopy(cam_frame, sensor_msgs::image_encodings::BGR8);
   cv::Mat frame = cv_image->image;
   cv::Mat grayScale;
   cv::cvtColor(frame, grayScale, cv::COLOR_BGR2GRAY);
+
+  // convert it to black and white image
   cv::Mat blackn_white;
   cv::threshold(grayScale, blackn_white,
                 this->get_parameter("threshold").as_int(), 255,
                 cv::THRESH_BINARY);
 
+  // get the pixel cordinate  that are different from zero
   std::vector<cv::Point> white_pixels_indices;
   cv::findNonZero(blackn_white, white_pixels_indices);
   cv::Scalar center = cv::mean(white_pixels_indices);
+
+  // check if there is white dot and publish it center point
   if (white_pixels_indices.size()) {
     // the center of gravity of white pixels
     int centerx = static_cast<int>(center[0]);
     int centery = static_cast<int>(center[1]);
-    center_of_gravity.data = {centerx, centery};
+    center_of_gravity.point.set__x(centerx);
+    center_of_gravity.point.set__y(centery);
 
     // create a small box
     int width = 20;
@@ -41,6 +48,8 @@ void LightPoseNode::callback(const sensor_msgs::msg::Image &cam_frame) {
     cv::rectangle(frame, cv::Point(topLeftX, topLeftY),
                   cv::Point(bottomRightX, bottomRightY), cv::Scalar(0, 0, 255),
                   5);
+
+    // convert it back to sensor_msgs::msg::Image type
     auto cvImage = std::make_shared<cv_bridge::CvImage>();
     cvImage->encoding = "mono8";
     cvImage->header.frame_id = cam_frame.header.frame_id;

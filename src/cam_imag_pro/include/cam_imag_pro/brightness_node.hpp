@@ -21,6 +21,7 @@ private:
   void callback(const sensor_msgs::msg::Image &cam_frame);
 
 public:
-  const std::string parameter_name = "brightness_param";
+  // parameter name for the brightness threshold
+  const std::string PARAMETER_NAME = "threshold";
   BrightnessNode();
 };

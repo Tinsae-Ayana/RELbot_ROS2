@@ -92,6 +92,8 @@ void RELbotSimulator::webcam_topic_callback(
   @infinity, so L/R does nothing) Theta       - Pan L/R over IMG, can also
   extend outside borders
 
+
+
   Requirement: Output IMG can't change in actual size, due to allocation issues,
   so re-scaling might be needed
 
