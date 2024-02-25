@@ -35,13 +35,17 @@ void SetpointsPublisher::curr_pose_callback(
   //     (double)(this->light_pose.point.y -
   //              current_camera_pose.point
   //                  .y); // it does not have any effect since we can't move
-  //                  the
-  //                       // robot in z axis of the world (y axis of the image)
+  //                  the   robot in z axis of the world (y axis of the image)
 
   auto left_motor_vel = std_msgs::msg::Float64();
-  left_motor_vel.data = -0.01 * x_difference;
+  left_motor_vel.data =
+      -0.01 * x_difference; // if the difference is positive the left motor
+                            // should rotate in reverse
   auto right_motor_vel = std_msgs::msg::Float64();
-  right_motor_vel.data = 0.01 * x_difference;
+  right_motor_vel.data =
+      0.01 * x_difference; // if the difference is positive the right motor
+                           // should move forward. 0.01 is just to avoid swing
+                           // of the motors in reverse and forward direction
 
   // publish the data
   left_motor_vel_pub->publish(left_motor_vel);

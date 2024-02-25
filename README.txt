@@ -39,5 +39,5 @@
 ## 1.2 Sequence controller
 
 
-
+* run 'ros launch setpoints_publisher start_all_nodes.launch.py'
 
