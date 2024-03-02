@@ -21,13 +21,15 @@ SetpointsPublisher::SetpointsPublisher() : Node("setpoints_publisher") {
 
 void SetpointsPublisher::light_pose_callback(
     const geometry_msgs::msg::PointStamped &center_of_gravity) {
+
   this->light_pose.point = center_of_gravity.point;
 }
 
 void SetpointsPublisher::curr_pose_callback(
     const geometry_msgs::msg::PointStamped &current_camera_pose) {
-
-  // get the difference betweeen current position the camera and light position
+  (void)current_camera_pose;
+  // get the difference betweeen current position of the camera and light
+  // position
   double x_difference =
       (double)(current_camera_pose.point.x - this->light_pose.point.x);
 
@@ -38,14 +40,16 @@ void SetpointsPublisher::curr_pose_callback(
   //                  the   robot in z axis of the world (y axis of the image)
 
   auto left_motor_vel = std_msgs::msg::Float64();
+
   left_motor_vel.data =
       -0.01 * x_difference; // if the difference is positive the left motor
-                            // should rotate in reverse
+  // should rotate in reverse
   auto right_motor_vel = std_msgs::msg::Float64();
+
   right_motor_vel.data =
       0.01 * x_difference; // if the difference is positive the right motor
-                           // should move forward. 0.01 is just to avoid swing
-                           // of the motors in reverse and forward direction
+  //  should move forward. 0.01 is just to avoid swing
+  //  of the motors in reverse and forward direction
 
   // publish the data
   left_motor_vel_pub->publish(left_motor_vel);

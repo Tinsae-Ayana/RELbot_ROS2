@@ -11,6 +11,7 @@ LightPoseNode::LightPoseNode() : Node("light_pose_indicator_node") {
 }
 
 void LightPoseNode::callback(const sensor_msgs::msg::Image &cam_frame) {
+
   // convert it to grayimage
   cv_bridge::CvImagePtr cv_image =
       cv_bridge::toCvCopy(cam_frame, sensor_msgs::image_encodings::BGR8);
@@ -24,42 +25,35 @@ void LightPoseNode::callback(const sensor_msgs::msg::Image &cam_frame) {
                 this->get_parameter("threshold").as_int(), 255,
                 cv::THRESH_BINARY);
 
-  // get the pixel cordinate  that are different from zero
-  std::vector<cv::Point> white_pixels_indices;
-  cv::findNonZero(blackn_white, white_pixels_indices);
-  cv::Scalar center = cv::mean(white_pixels_indices);
+  // calculate the moment of the image
+  cv::Moments m = cv::moments(blackn_white, true);
 
-  // check if there is white dot and publish it center point
-  if (white_pixels_indices.size()) {
-    // the center of gravity of white pixels
-    int centerx = static_cast<int>(center[0]);
-    int centery = static_cast<int>(center[1]);
-    center_of_gravity.point.set__x(centerx);
-    center_of_gravity.point.set__y(centery);
+  // check if there are pixels with non-zero intensity
+  if (m.m00 > 0) {
+    // calculate the "center of gravity" of the white dot
+    int x = int(m.m10 / m.m00);
+    int y = int(m.m01 / m.m00);
 
-    // create a small box
-    int width = 20;
-    int topLeftX = centerx - width / 2;
-    int topLeftY = centery - width / 2;
-    int bottomRightX = centerx + width / 2;
-    int bottomRightY = centery + width / 2;
-
-    // insert a box around the center
-    cv::rectangle(frame, cv::Point(topLeftX, topLeftY),
-                  cv::Point(bottomRightX, bottomRightY), cv::Scalar(0, 0, 255),
-                  5);
-
-    // convert it back to sensor_msgs::msg::Image type
-    auto cvImage = std::make_shared<cv_bridge::CvImage>();
-    cvImage->encoding = "mono8";
-    cvImage->header.frame_id = cam_frame.header.frame_id;
-    cvImage->image = frame;
-    auto im = cvImage->toImageMsg();
-
-    // publish the coordinate and the image with rectangle
+    // publishe it to the light_pose topic
+    geometry_msgs::msg::PointStamped center_of_gravity;
+    center_of_gravity.point.x = x;
+    center_of_gravity.point.y = y;
+    center_of_gravity.point.z = 0.0;
     publisher->publish(center_of_gravity);
-    publish_with_mark->publish(*im);
-  }
+
+    // prepare and send image with box around the "center of gravity" for visual
+    // inspection
+    cv::Mat colored_image;
+    cv::cvtColor(blackn_white, colored_image, cv::COLOR_GRAY2BGR);
+    cv::rectangle(colored_image, cv::Point(x - 10, y - 10),
+                  cv::Point(x + 10, y + 10), cv::Scalar(0, 255, 0), 3);
+
+    cv_bridge::CvImage colored_image_bridge(cam_frame.header, "bgr8",
+                                            colored_image);
+    sensor_msgs::msg::Image ros_image;
+    colored_image_bridge.toImageMsg(ros_image);
+    publish_with_mark->publish(ros_image);
+  };
 }
 
 int main(int argc, char *argv[]) {

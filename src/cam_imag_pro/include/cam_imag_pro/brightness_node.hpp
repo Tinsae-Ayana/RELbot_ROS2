@@ -1,3 +1,4 @@
+#pragma once
 #include <chrono>
 #include <functional>
 #include <memory>
@@ -13,7 +14,7 @@ using std::placeholders::_1;
 
 class BrightnessNode : public rclcpp::Node {
 private:
-  // attribute
+  // attributes
   rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr subscriber;
   rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher;
 

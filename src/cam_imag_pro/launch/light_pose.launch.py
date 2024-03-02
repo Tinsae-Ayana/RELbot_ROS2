@@ -20,6 +20,7 @@ def generate_launch_description() :
         Node (
             package="image_tools",
             executable="showimage",
+            name = 'image_with_marker_display',
             remappings=[
                 ("/image", "/image_with_marker")
             ]

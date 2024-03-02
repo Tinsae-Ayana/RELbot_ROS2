@@ -51,6 +51,7 @@ void RELbotSimulator::create_topics() {
                       std::placeholders::_1));
     RCLCPP_INFO(get_logger(), "Subscribed to topic %s",
                 RELbotSimulator::CMD_VEL_TOPIC.c_str());
+
   } else {
     RCLCPP_INFO(get_logger(), "Using Individual Motors Command mode");
 
@@ -121,7 +122,7 @@ void RELbotSimulator::webcam_topic_callback(
 
   int output_image_dim =
       (int)(height / 2 -
-            (x * height / 10)); // 0 starts at height/2, so somehwat zoomed.
+            (x * height / 10)); // 0 starts at height/2, so somewhat zoomed.
 
   output_image_ = RELbotSimulator::CreateCVSubimage(
       msg_cam_img, center_pixel_x, center_pixel_y, output_image_dim);

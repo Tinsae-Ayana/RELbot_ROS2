@@ -3,17 +3,17 @@ from launch_ros.actions import Node
 
 def  generate_launch_description() :
     return LaunchDescription(
-        [     Node(
+        [   Node(
                 package = "image_tools",
-                executable = "cam2image",     
+                executable = "cam2image",                # camera
             ),
             Node(
                 package = "RELbot_simulator",
-                executable = "RELbot_simulator",
+                executable = "RELbot_simulator",          # simulator
             ),
              Node(
                 package = "setpoints_publisher",
-                executable = "setpoints_publisher",  
+                executable = "setpoints_publisher",        # sequence controller
             ), 
             Node(
                 package = "cam_imag_pro",

@@ -7,11 +7,6 @@ DynamicsSimulation::DynamicsSimulation(rclcpp::Node *parent_node,
   time_step_ = time_step;
 }
 
-// random number generator
-// std::random_device seed;
-// generator = std::mt19937(seed());
-// dist = std::uniform_real_distribution<>(-0.2, 0.2);
-
 void DynamicsSimulation::reset() {
   xWorld_ = 0.0;
   yWorld_ = 0.0;

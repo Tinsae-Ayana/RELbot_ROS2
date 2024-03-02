@@ -14,9 +14,10 @@ def generate_launch_description() :
             executable="showimage"
         ),
         Node(
-                package="cam_imag_pro",
-                executable="brightness_node"
+            package="cam_imag_pro",
+            executable="brightness_node"
             )
         ]
     )
+
 
